@@ -1,0 +1,9 @@
+Presentation :
+    Mon progamme est un jeu d'echec entre 2 joueurs et entre joueur-ordinateur.
+
+pour lancer le jeu 
+veuillez aller dans le terminal puis entrer "make"
+
+ensuite entrer "./main"
+
+et bon jeu a toi!
