@@ -2,11 +2,13 @@
 using namespace std;
 #include "game.hpp"
 #include <fstream>
+#include <ctime>
 
 int main()
 {
-    srand(time(NULL)); // je l'ai pris sur google vu que le rand() ne donnait pas le vrai aleatoire.
-                       // avec srand les rand() utilises seront de vrai aleatoires.
+    srand(time(NULL));                     // je l'ai pris sur google vu que le rand() ne donnait pas le vrai aleatoire.
+                                           // avec srand les rand() utilises seront de vrai aleatoires.
+    ofstream file("FEN1.txt", ios::trunc); // pour vider completement le fichier d'historique
     Game G;
     G.camp = blanc;
     cout << "voulez-vous affronter un autre joueur ou l'IA? \n taper 'a' pour affronter un joueur et 'b' pour affronter l'IA ";
@@ -100,7 +102,6 @@ int main()
         cout << "Victoire des noirs!" << endl;
     if (G.gagnant == egalite)
         cout << "Match null !!" << endl;
-    ofstream file("FEN1.txt", ios::trunc);
 
     delete[] G.T;
     delete[] G.T2;
