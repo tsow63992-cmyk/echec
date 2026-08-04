@@ -16,6 +16,7 @@ int main()
                                            // avec srand les rand() utilises seront de vrai aleatoires.
     ofstream file("FEN1.txt", ios::trunc); // pour vider completement le fichier d'historique
     Game G;
+    G.tete = NULL;
     G.camp = blanc;
     cout << "voulez-vous affronter un autre joueur ou l'IA? \n taper 'a' pour affronter un joueur et 'b' pour affronter l'IA ";
     char choix, choix2;
