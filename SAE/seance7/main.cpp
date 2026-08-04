@@ -1,11 +1,11 @@
-#include <iostream>
-using namespace std;
-#include "game.hpp"
-#include <fstream>
-#include <ctime>
 #ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #endif
+using namespace std;
+#include "game.hpp"
+#include <ctime>
+#include <fstream>
 
 int main()
 {
