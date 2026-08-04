@@ -4,6 +4,7 @@ Presentation :
 pour lancer le jeu 
 veuillez aller dans le terminal puis entrer "make"
 
-ensuite entrer "./main"
+Si vous etes sur Linux : ensuite entrer "./main"
+Si vous etes sur windows: ensuite entrer "main.exe"
 
 et bon jeu a toi!
