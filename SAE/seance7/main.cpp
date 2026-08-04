@@ -3,9 +3,15 @@ using namespace std;
 #include "game.hpp"
 #include <fstream>
 #include <ctime>
+#ifdef _WIN32
+#include <windows.h>
+#endif
 
 int main()
 {
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+#endif
     srand(time(NULL));                     // je l'ai pris sur google vu que le rand() ne donnait pas le vrai aleatoire.
                                            // avec srand les rand() utilises seront de vrai aleatoires.
     ofstream file("FEN1.txt", ios::trunc); // pour vider completement le fichier d'historique
