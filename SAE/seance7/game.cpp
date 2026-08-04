@@ -240,7 +240,7 @@ void choose_mouvement_human(Game *G)
         }
         if (verifMat(*G, casee, caseeAr, mat))
         {
-            if (G->camp = blanc)
+            if (G->camp == blanc)
                 G->gagnant = noir;
             else
                 G->gagnant = blanc;

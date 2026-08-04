@@ -54,11 +54,17 @@ int main()
                 cout << "voulez-vous abandonner ? (o/n) : ";
                 cin >> choix2;
             }
-
+            cin.ignore(10000, '\n');
             if (choix2 == 'o' && G.camp == blanc)
+            {
                 G.gagnant = noir;
+                break;
+            }
             if (choix2 == 'o' && G.camp == noir)
+            {
                 G.gagnant = blanc;
+                break;
+            }
         }
         if (G.joueur == humain)
         {
