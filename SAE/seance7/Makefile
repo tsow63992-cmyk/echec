@@ -1,5 +1,13 @@
-main : main.o game.o historique.o view.o mask.o board.o 
-	g++ main.o game.o historique.o view.o mask.o board.o -o main
+ifeq ($(OS),Windows_NT)
+	EXEC = main.exe
+	RM = del /Q
+else
+	EXEC = main
+	RM = rm -f
+endif
+
+$(EXEC) : main.o game.o historique.o view.o mask.o board.o 
+	g++ main.o game.o historique.o view.o mask.o board.o -o $(EXEC)
 
 main.o : main.cpp
 	g++ -c main.cpp
@@ -18,3 +26,6 @@ mask.o : mask.cpp
 
 board.o : board.cpp
 	g++ -c board.cpp
+
+clean:
+	$(RM) *.o $(EXEC)
